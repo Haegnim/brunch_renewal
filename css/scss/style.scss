@@ -1,0 +1,231 @@
+.top-bannar {
+  width: 100%;
+  height: 60px;
+  background: #00ff;
+}
+header {
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  // border-bottom: 1px solid #ddd;
+  .center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .h-left {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    padding: 17px 0;
+    .hamburger {
+      width: 30px;
+      margin-right: 30px;
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-bottom: 8px;
+        background: #000;
+        &:nth-child(3) {
+          margin: 0;
+        }
+      }
+    }
+    .logo {
+      width: 80px;
+      height: 25px;
+      background: url(/brunch_R/img/icon/logo_brunch_v1.png) no-repeat;
+      display: block;
+    }
+  }
+  .h-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40%;
+    .start-login {
+      width: 66px;
+      height: 30px;
+      border-radius: 16px;
+      border: 1px solid#959595;
+      font-size: 12px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 2;
+      background: #fff;
+      margin-right: 20px;
+    }
+    .serch {
+      padding: 10px;
+      background: none;
+      .serch-icon {
+        display: block;
+        width: 22px;
+        height: 22px;
+        background: url(/brunch_R/img/icon/ico_view_cover.v4.png) no-repeat;
+        background-position: -30px 0px;
+      }
+    }
+  }
+}
+.main-cover {
+  width: 100%;
+  // height: 1000px;
+  background: #fff;
+  .intro_brunch {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    .tit {
+      display: flex;
+      h3 {
+        font-size: 40px;
+        font-weight: 400;
+        color: #1a1a1a;
+        text-align: left;
+        font-family: "Nanum Myeongjo", serif;
+        letter-spacing: -0.05em;
+        margin-top: 10px;
+      }
+      .icon {
+        display: block;
+        width: 28px;
+        height: 28px;
+        background: url(/brunch_R/img/icon/ico_brunch_v8_181004_v2.png)
+          no-repeat;
+        background-position: -120px -200px;
+        margin: 0 10px;
+      }
+    }
+    .sub-txt {
+      margin-top: 11px;
+      font-size: 32px;
+      color: #cacaca;
+      font-family: "Nanum Myeongjo", serif;
+      letter-spacing: -0.05em;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
+    .notice {
+      display: flex;
+      justify-content: flex-end;
+      span {
+        font-size: 11px;
+        font-style: italic;
+        color: #00c3bd;
+        padding-top: 2px;
+      }
+      p {
+        font-size: 12px;
+        padding-left: 7px;
+        color: #959595;
+      }
+    }
+  }
+  .wrap_slide {
+    width: 960px;
+    height: 520px;
+    overflow: visible;
+    background: #ddd;
+    position: relative;
+    margin: 0 auto;
+    .list_slide {
+      width: 900%;
+      height: 520px;
+      background: yellow;
+      position: absolute;
+      display: flex;
+      .slide-one {
+        width: 960px;
+        height: 520px;
+        background: yellowgreen;
+        display: flex;
+        .bookcover {
+          width: 50%;
+          background: #eee;
+          background: url(/brunch_R/img/mainCover/img3.png) no-repeat center
+            center;
+          background-size: cover;
+        }
+        .article-card {
+          width: 50%;
+          background: #ddd;
+          a {
+            display: block;
+            height: 50%;
+            &:nth-child(1) {
+              background: url(/brunch_R/img/mainCover/img1.png) no-repeat center
+                center;
+              background-size: cover;
+            }
+            &:nth-child(2) {
+              background: url(/brunch_R/img/mainCover/img2.png) no-repeat center
+                center;
+              background-size: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slide-btn {
+    display: flex;
+    max-width: 1920px;
+    a {
+      position: absolute;
+
+      display: block;
+      width: 100px;
+      height: 100px;
+      top: 653px;
+      transform: translateY(-50px);
+      // margin: 0 10px;
+      &.pre-btn {
+        background: url(/brunch_R/img/icon/ico_brunch_v8_181004_v2.png)
+          no-repeat;
+        background-position: -167px -175px;
+        left: 20px;
+      }
+      &.nex-btn {
+        background: url(/brunch_R/img/icon/ico_brunch_v8_181004_v2.png)
+          no-repeat;
+        background-position: -269px -175px;
+        right: 20px;
+        // right: -50%;
+      }
+    }
+  }
+  .slide-paging {
+    .slidepagelist {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      .page-num {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+.cate {
+  padding: 100px;
+  width: 100%;
+  // height: 450px;
+  text-align: center;
+}
+.keyword {
+}
+.writers {
+}
+.banner {
+  width: 100%;
+  height: 300px;
+  background: #efefef;
+}
+.articles {
+}
+footer {
+  width: 100%;
+  height: 353px;
+  background: #888;
+}
