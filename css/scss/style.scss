@@ -214,6 +214,28 @@ header {
   text-align: center;
 }
 .keyword {
+  .container {
+    margin: 60px auto 0 auto;
+    max-width: 920px;
+    height: 345px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border-collapse: collapse;
+    grid-gap: 0;
+    .item {
+      display: flex;
+      border: 1px solid #999;
+      margin: 0 0 -1px -1px;
+      padding: 20px;
+      text-align: center;
+      &:hover,
+      &:focus {
+        border: 1px solid #00ffdd;
+        color: #00ffdd;
+        z-index: 99;
+      }
+    }
+  }
 }
 .writers {
 }
