@@ -1,11 +1,35 @@
 .top-bannar {
   width: 100%;
   height: 60px;
-  background: #00ff;
+  background: #00ddee;
 }
-header {
+@keyframes header {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#header {
+  &.on {
+    // animation: header 0.4s 0.4s;
+    // animation-fill-mode: forwards;
+    position: fixed;
+    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+    border-bottom: 1px solid #ddd;
+  }
   height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+
   background: rgba(255, 255, 255, 0.9);
+  padding: 0 20px;
+  transition: all 0.4s;
+
   // border-bottom: 1px solid #ddd;
   .center {
     display: flex;
@@ -123,62 +147,108 @@ header {
       }
     }
   }
-  .wrap_slide {
+  @at-root .wrap_slide {
     width: 960px;
     height: 520px;
     overflow: visible;
-    background: #ddd;
+    // background: #ddd;
     position: relative;
     margin: 0 auto;
     .list_slide {
-      width: 900%;
+      // width: 900%;
       height: 520px;
-      background: yellow;
+      // background: yellow;
       position: absolute;
       display: flex;
+      transition: all 0.4s;
+
       .slide-one {
         width: 960px;
         height: 520px;
-        background: yellowgreen;
+        // background: yellowgreen;
         display: flex;
         .bookcover {
           width: 50%;
           background: #eee;
-          background: url(/brunch_R/img/mainCover/img3.png) no-repeat center
+          background: url(/brunch_R/img/mainCover/book.png) no-repeat center
             center;
           background-size: cover;
         }
-        .article-card {
+        @at-root .article-card {
           width: 50%;
           background: #ddd;
+          &.thflex {
+            width: 100%;
+            display: flex;
+            a {
+              height: 100%;
+              width: 33.34%;
+            }
+          }
           a {
             display: block;
             height: 50%;
-            &:nth-child(1) {
-              background: url(/brunch_R/img/mainCover/img1.png) no-repeat center
-                center;
-              background-size: cover;
+            position: relative;
+            overflow: hidden;
+            .over-r {
+              width: 100%;
+              height: 100%;
+              background: #000;
+              opacity: 0.4;
+              position: absolute;
+              transition: all 0.4s;
+              z-index: 95;
             }
-            &:nth-child(2) {
-              background: url(/brunch_R/img/mainCover/img2.png) no-repeat center
-                center;
-              background-size: cover;
+            .txt-box {
+              position: absolute;
+              z-index: 99;
+              width: 100%;
+              top: 30%;
+              b {
+                display: block;
+                color: #fff;
+                text-align: center;
+                padding-top: 12px;
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 36px;
+                font-family: "Nanum Myeongjo", sans-serif;
+                letter-spacing: -0.025em;
+              }
+              em {
+                display: block;
+                color: #fff;
+                padding-top: 30px;
+                text-align: center;
+              }
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: all 0.4s;
+            }
+            &:hover .over-r {
+              opacity: 0.55;
+            }
+            &:hover img {
+              transform: scale(1.1);
             }
           }
         }
       }
     }
   }
-  .slide-btn {
+  @at-root .slide-btn {
     display: flex;
     max-width: 1920px;
-    a {
+    button {
       position: absolute;
-
       display: block;
       width: 100px;
       height: 100px;
       top: 653px;
+      z-index: 100;
       transform: translateY(-50px);
       // margin: 0 10px;
       &.pre-btn {
@@ -186,6 +256,7 @@ header {
           no-repeat;
         background-position: -167px -175px;
         left: 20px;
+        display: none;
       }
       &.nex-btn {
         background: url(/brunch_R/img/icon/ico_brunch_v8_181004_v2.png)
@@ -203,6 +274,9 @@ header {
       padding: 20px;
       .page-num {
         padding: 0 10px;
+        button {
+          background: none;
+        }
       }
     }
   }
@@ -212,42 +286,200 @@ header {
   width: 100%;
   // height: 450px;
   text-align: center;
+  h3 {
+    letter-spacing: 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .cateP {
+    font-size: 11px;
+    color: #aaa;
+  }
 }
 .keyword {
   .container {
     margin: 60px auto 0 auto;
-    max-width: 920px;
-    height: 345px;
+    max-width: 960px;
+    height: 360px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     border-collapse: collapse;
     grid-gap: 0;
     .item {
       display: flex;
-      border: 1px solid #999;
+      border: 1px solid #eee;
       margin: 0 0 -1px -1px;
-      padding: 20px;
-      text-align: center;
+      padding: 20px 15px;
+      position: relative;
+
       &:hover,
       &:focus {
-        border: 1px solid #00ffdd;
-        color: #00ffdd;
+        border: 1px solid #00c3bd;
+        color: #00c3bd;
         z-index: 99;
+      }
+      p {
+        margin: auto;
+        text-align: center;
+      }
+      .ico-new {
+        background: url(/brunch_R/img/icon/img_weekly.v2_rtn.png) no-repeat;
+        background-size: 300px 170px;
+        background-position: -77px -80px;
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 12px;
+        right: 12px;
       }
     }
   }
 }
 .writers {
+  background: #fafafa;
+
+  .recommend-author {
+    margin: 60px 0;
+    .re-A-tab {
+      display: flex;
+      justify-content: center;
+      li {
+        a {
+          display: block;
+          border-radius: 25px;
+          border: 1px solid #eee;
+          padding: 7px 16px 6px;
+          margin: 0 2px;
+          background: #fff;
+          font-size: 15px;
+          color: #9e9e9e;
+          &.on {
+            border: 1px solid #00c3bd;
+            color: #00c3bd;
+          }
+        }
+      }
+    }
+  }
+  .writer-card {
+    width: 960px;
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        width: calc(33.33% - 10px);
+        background: #fff;
+
+        padding: 46px 40px;
+        margin-bottom: 15px;
+        .w-card {
+          width: 100%;
+          display: block;
+          display: flex;
+          flex-direction: column;
+          img {
+            width: 80px;
+            height: 80px;
+            background: palevioletred;
+            margin: 0 auto;
+            border-radius: 40px;
+          }
+          b {
+            padding: 17px 12px 0;
+            font-size: 20px;
+            font-family: "Nanum Myeongjo", sans-serif;
+          }
+          em {
+            color: #666;
+            font-weight: 300;
+            margin-top: 4px;
+            font-size: 12px;
+          }
+          p {
+            height: 60px;
+            margin-top: 16px;
+            font-weight: 300;
+            color: #959595;
+            line-height: 20px;
+            overflow: hidden;
+            font-size: 12px;
+          }
+        }
+        .writer-keyword {
+          display: flex;
+          justify-content: center;
+          margin-top: 40px;
+          a {
+            display: block;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            padding: 4px 10px;
+            color: #ddd;
+            margin: 0 2px;
+            background: #fff;
+            font-size: 12px;
+            line-height: 18px;
+            &:nth-child(3) {
+              background: url(/brunch_R/img/icon/ico_brunch_v8_181004_v2.png)
+                no-repeat;
+              background-position: -280px -70px;
+              right: 20px;
+              width: 35px;
+              height: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .banner {
-  width: 100%;
-  height: 300px;
-  background: #efefef;
+  width: 960px;
+  height: 140px;
+  margin: 0 auto;
+  background: url(/brunch_R/img/banner.png) no-repeat;
+  margin-bottom: 100px;
 }
 .articles {
+  position: relative;
+  p {
+    margin-bottom: 47px;
+  }
+  .slide-down {
+    width: 240px;
+    margin-right: 15px;
+    .down-con {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 22px;
+      }
+      b {
+        display: block;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: -0.025em;
+        text-align: left;
+      }
+      p {
+        padding-top: 10px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        color: #959595;
+        letter-spacing: -0.025em;
+      }
+    }
+  }
 }
 footer {
   width: 100%;
   height: 353px;
-  background: #888;
+  background: #101010;
 }

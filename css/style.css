@@ -1,52 +1,81 @@
 .top-bannar {
   width: 100%;
   height: 60px;
-  background: #00ff;
+  background: #00ddee;
 }
 
-header {
-  height: 60px;
-  background: rgba(255, 255, 255, 0.9);
+@-webkit-keyframes header {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-header .center {
+
+@keyframes header {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#header {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0 20px;
+  transition: all 0.4s;
+}
+#header.on {
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+  border-bottom: 1px solid #ddd;
+}
+#header .center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .h-left {
+#header .h-left {
   display: flex;
   align-items: center;
   width: 40%;
   height: auto;
   padding: 17px 0;
 }
-header .h-left .hamburger {
+#header .h-left .hamburger {
   width: 30px;
   margin-right: 30px;
 }
-header .h-left .hamburger span {
+#header .h-left .hamburger span {
   display: block;
   width: 100%;
   height: 2px;
   margin-bottom: 8px;
   background: #000;
 }
-header .h-left .hamburger span:nth-child(3) {
+#header .h-left .hamburger span:nth-child(3) {
   margin: 0;
 }
-header .h-left .logo {
+#header .h-left .logo {
   width: 80px;
   height: 25px;
   background: url(/brunch_R/img/icon/logo_brunch_v1.png) no-repeat;
   display: block;
 }
-header .h-right {
+#header .h-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 40%;
 }
-header .h-right .start-login {
+#header .h-right .start-login {
   width: 66px;
   height: 30px;
   border-radius: 16px;
@@ -58,11 +87,11 @@ header .h-right .start-login {
   background: #fff;
   margin-right: 20px;
 }
-header .h-right .serch {
+#header .h-right .serch {
   padding: 10px;
   background: none;
 }
-header .h-right .serch .serch-icon {
+#header .h-right .serch .serch-icon {
   display: block;
   width: 22px;
   height: 22px;
@@ -123,71 +152,119 @@ header .h-right .serch .serch-icon {
   padding-left: 7px;
   color: #959595;
 }
-.main-cover .wrap_slide {
+.wrap_slide {
   width: 960px;
   height: 520px;
   overflow: visible;
-  background: #ddd;
   position: relative;
   margin: 0 auto;
 }
-.main-cover .wrap_slide .list_slide {
-  width: 900%;
+.wrap_slide .list_slide {
   height: 520px;
-  background: yellow;
   position: absolute;
   display: flex;
+  transition: all 0.4s;
 }
-.main-cover .wrap_slide .list_slide .slide-one {
+.wrap_slide .list_slide .slide-one {
   width: 960px;
   height: 520px;
-  background: yellowgreen;
   display: flex;
 }
-.main-cover .wrap_slide .list_slide .slide-one .bookcover {
+.wrap_slide .list_slide .slide-one .bookcover {
   width: 50%;
   background: #eee;
-  background: url(/brunch_R/img/mainCover/img3.png) no-repeat center center;
+  background: url(/brunch_R/img/mainCover/book.png) no-repeat center center;
   background-size: cover;
 }
-.main-cover .wrap_slide .list_slide .slide-one .article-card {
+.article-card {
   width: 50%;
   background: #ddd;
 }
-.main-cover .wrap_slide .list_slide .slide-one .article-card a {
+.article-card.thflex {
+  width: 100%;
+  display: flex;
+}
+.article-card.thflex a {
+  height: 100%;
+  width: 33.34%;
+}
+.article-card a {
   display: block;
   height: 50%;
+  position: relative;
+  overflow: hidden;
 }
-.main-cover .wrap_slide .list_slide .slide-one .article-card a:nth-child(1) {
-  background: url(/brunch_R/img/mainCover/img1.png) no-repeat center center;
-  background-size: cover;
+.article-card a .over-r {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+  position: absolute;
+  transition: all 0.4s;
+  z-index: 95;
 }
-.main-cover .wrap_slide .list_slide .slide-one .article-card a:nth-child(2) {
-  background: url(/brunch_R/img/mainCover/img2.png) no-repeat center center;
-  background-size: cover;
+.article-card a .txt-box {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  top: 30%;
 }
-.main-cover .slide-btn {
+.article-card a .txt-box b {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding-top: 12px;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  font-family: "Nanum Myeongjo", sans-serif;
+  letter-spacing: -0.025em;
+}
+.article-card a .txt-box em {
+  display: block;
+  color: #fff;
+  padding-top: 30px;
+  text-align: center;
+}
+.article-card a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.4s;
+}
+.article-card a:hover .over-r {
+  opacity: 0.55;
+}
+.article-card a:hover img {
+  transform: scale(1.1);
+}
+
+.slide-btn {
   display: flex;
   max-width: 1920px;
 }
-.main-cover .slide-btn a {
+.slide-btn button {
   position: absolute;
   display: block;
   width: 100px;
   height: 100px;
   top: 653px;
+  z-index: 100;
   transform: translateY(-50px);
 }
-.main-cover .slide-btn a.pre-btn {
+.slide-btn button.pre-btn {
   background: url(/brunch_R/img/icon/ico_brunch_v8_181004_v2.png) no-repeat;
   background-position: -167px -175px;
   left: 20px;
+  display: none;
 }
-.main-cover .slide-btn a.nex-btn {
+.slide-btn button.nex-btn {
   background: url(/brunch_R/img/icon/ico_brunch_v8_181004_v2.png) no-repeat;
   background-position: -269px -175px;
   right: 20px;
 }
+
 .main-cover .slide-paging .slidepagelist {
   display: flex;
   justify-content: center;
@@ -196,17 +273,30 @@ header .h-right .serch .serch-icon {
 .main-cover .slide-paging .slidepagelist .page-num {
   padding: 0 10px;
 }
+.main-cover .slide-paging .slidepagelist .page-num button {
+  background: none;
+}
 
 .cate {
   padding: 100px;
   width: 100%;
   text-align: center;
 }
+.cate h3 {
+  letter-spacing: 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.cate .cateP {
+  font-size: 11px;
+  color: #aaa;
+}
 
 .keyword .container {
   margin: 60px auto 0 auto;
-  max-width: 920px;
-  height: 345px;
+  max-width: 960px;
+  height: 360px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   border-collapse: collapse;
@@ -214,25 +304,171 @@ header .h-right .serch .serch-icon {
 }
 .keyword .container .item {
   display: flex;
-  border: 1px solid #999;
+  border: 1px solid #eee;
   margin: 0 0 -1px -1px;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 15px;
+  position: relative;
 }
 .keyword .container .item:hover, .keyword .container .item:focus {
-  border: 1px solid #00ffdd;
-  color: #00ffdd;
+  border: 1px solid #00c3bd;
+  color: #00c3bd;
   z-index: 99;
+}
+.keyword .container .item p {
+  margin: auto;
+  text-align: center;
+}
+.keyword .container .item .ico-new {
+  background: url(/brunch_R/img/icon/img_weekly.v2_rtn.png) no-repeat;
+  background-size: 300px 170px;
+  background-position: -77px -80px;
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  right: 12px;
+}
+
+.writers {
+  background: #fafafa;
+}
+.writers .recommend-author {
+  margin: 60px 0;
+}
+.writers .recommend-author .re-A-tab {
+  display: flex;
+  justify-content: center;
+}
+.writers .recommend-author .re-A-tab li a {
+  display: block;
+  border-radius: 25px;
+  border: 1px solid #eee;
+  padding: 7px 16px 6px;
+  margin: 0 2px;
+  background: #fff;
+  font-size: 15px;
+  color: #9e9e9e;
+}
+.writers .recommend-author .re-A-tab li a.on {
+  border: 1px solid #00c3bd;
+  color: #00c3bd;
+}
+.writers .writer-card {
+  width: 960px;
+  margin: 0 auto;
+}
+.writers .writer-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.writers .writer-card ul li {
+  width: calc(33.33% - 10px);
+  background: #fff;
+  padding: 46px 40px;
+  margin-bottom: 15px;
+}
+.writers .writer-card ul li .w-card {
+  width: 100%;
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+.writers .writer-card ul li .w-card img {
+  width: 80px;
+  height: 80px;
+  background: palevioletred;
+  margin: 0 auto;
+  border-radius: 40px;
+}
+.writers .writer-card ul li .w-card b {
+  padding: 17px 12px 0;
+  font-size: 20px;
+  font-family: "Nanum Myeongjo", sans-serif;
+}
+.writers .writer-card ul li .w-card em {
+  color: #666;
+  font-weight: 300;
+  margin-top: 4px;
+  font-size: 12px;
+}
+.writers .writer-card ul li .w-card p {
+  height: 60px;
+  margin-top: 16px;
+  font-weight: 300;
+  color: #959595;
+  line-height: 20px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.writers .writer-card ul li .writer-keyword {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.writers .writer-card ul li .writer-keyword a {
+  display: block;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  padding: 4px 10px;
+  color: #ddd;
+  margin: 0 2px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 18px;
+}
+.writers .writer-card ul li .writer-keyword a:nth-child(3) {
+  background: url(/brunch_R/img/icon/ico_brunch_v8_181004_v2.png) no-repeat;
+  background-position: -280px -70px;
+  right: 20px;
+  width: 35px;
+  height: 28px;
 }
 
 .banner {
+  width: 960px;
+  height: 140px;
+  margin: 0 auto;
+  background: url(/brunch_R/img/banner.png) no-repeat;
+  margin-bottom: 100px;
+}
+
+.articles {
+  position: relative;
+}
+.articles p {
+  margin-bottom: 47px;
+}
+.articles .slide-down {
+  width: 240px;
+  margin-right: 15px;
+}
+.articles .slide-down .down-con img {
   width: 100%;
-  height: 300px;
-  background: #efefef;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 22px;
+}
+.articles .slide-down .down-con b {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.025em;
+  text-align: left;
+}
+.articles .slide-down .down-con p {
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: justify;
+  color: #959595;
+  letter-spacing: -0.025em;
 }
 
 footer {
   width: 100%;
   height: 353px;
-  background: #888;
+  background: #101010;
 }

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 a {
-  color: #212529;
+  color: #333;
   text-decoration: none;
 }
 ol,
@@ -46,6 +46,7 @@ b {
 .wrap {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 body {

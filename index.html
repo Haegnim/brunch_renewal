@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Nanum+Myeongjo:wght@400;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- reset css link -->
@@ -20,7 +20,7 @@
   <body>
     <div class="wrap">
       <div class="top-bannar"></div>
-      <header>
+      <header id="header">
         <div class="center">
           <div class="h-left">
             <div class="hamburger">
@@ -37,102 +37,485 @@
         </div>
       </header>
       <aside class="3-line"></aside>
+      <!-- section main-cover start -->
       <section class="main-cover">
-        <div class="intro_brunch">
-          <div class="tit">
-            <h3>글이 작품이 되는 공간, 브런치</h3>
-            <span class="icon"></span>
+        <div class="center">
+          <div class="intro_brunch">
+            <div class="tit">
+              <h3>글이 작품이 되는 공간, 브런치</h3>
+              <span class="icon"></span>
+            </div>
+            <p class="sub-txt">
+              브런치에 담긴 아름다운 작품을 감상해 보세요.<br />
+              그리고 다시 꺼내 보세요.<br />
+              서랍 속 간직하고 있는 글과 감성을<br />
+            </p>
+            <!-- FIXME: 알림 ui>li*3 슬라이드 -->
+            <div class="notice">
+              <span>notice</span>
+              <p>3월 업데이트 사항 및 소셜 로그인 종료 안내</p>
+            </div>
           </div>
-          <p class="sub-txt">
-            브런치에 담긴 아름다운 작품을 감상해 보세요.<br />
-            그리고 다시 꺼내 보세요.<br />
-            서랍 속 간직하고 있는 글과 감성을<br />
-          </p>
-          <!-- FIXME: 알림 ui>li*3 슬라이드 -->
-          <div class="notice">
-            <span>notice</span>
-            <p>3월 업데이트 사항 및 소셜 로그인 종료 안내</p>
+          <!-- start main-slide -->
+          <div class="wrap_slide">
+            <ul class="list_slide" id="mainSlide">
+              <!-- li-main-side start-->
+              <li class="slide-one moveSlide">
+                <a class="bookcover"></a>
+                <div class="article-card">
+                  <a href="#">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                  </a>
+                  <a href="">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img2.png" alt="" />
+                  </a>
+                </div>
+              </li>
+              <!-- li-main-side end -->
+              <!-- li-main-side start -->
+              <li class="slide-one moveSlide">
+                <div class="article-card thflex">
+                  <a href="">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img2.png" alt="" />
+                  </a>
+                  <a href="#">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                  </a>
+                  <a href="">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img2.png" alt="" />
+                  </a>
+                </div>
+              </li>
+              <!-- li-main-side end -->
+              <!-- li-main-side start -->
+              <li class="slide-one moveSlide">
+                <div class="article-card">
+                  <a href="#">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                  </a>
+                  <a href="">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img2.png" alt="" />
+                  </a>
+                </div>
+                <div class="article-card">
+                  <a href="#">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                  </a>
+                  <a href="">
+                    <div class="over-r"></div>
+                    <div class="txt-box">
+                      <b>안빡친칠라</b>
+                      <em>오늘내일</em>
+                    </div>
+                    <img src="/brunch_R/img/mainCover/img2.png" alt="" />
+                  </a>
+                </div>
+              </li>
+              <!-- li-main-side end -->
+            </ul>
+          </div>
+          <!-- end of main-slide -->
+          <div class="slide-btn">
+            <button class="pre-btn" onclick="prebNextbtn(-1)"></button>
+            <button class="nex-btn" onclick="prebNextbtn(1)"></button>
+          </div>
+          <div class="slide-paging center">
+            <ul class="slidepagelist">
+              <li class="page-num">
+                <button href="#" onclick="clicknum(0)">01</button>
+              </li>
+              <li class="page-num">
+                <button href="#" onclick="clicknum(1)">02</button>
+              </li>
+              <li class="page-num">
+                <button href="#" onclick="clicknum(2)">03</button>
+              </li>
+            </ul>
           </div>
         </div>
+      </section>
+      <!-- end of section main-cover -->
+
+      <!-- section keyword start -->
+      <section class="keyword cate">
+        <div class="center">
+          <h3>BRUNCH KEYWORD</h3>
+          <p class="cateP">키워드로 분류된 다양한 글 모음</p>
+          <div class="container">
+            <a class="item"
+              ><p>지구한바퀴<br />세계여행</p>
+            </a>
+            <a class="item"><p>그림·웹툰</p> </a>
+            <a class="item"
+              ><p>시사·이슈</p>
+              <span class="ico-new"></span
+            ></a>
+            <a class="item"
+              ><p>IT<br />트렌드</p>
+            </a>
+            <a class="item"><p>사진·촬영</p> </a>
+            <a class="item"
+              ><p>취향저격<br />영화리뷰</p>
+            </a>
+            <a class="item"
+              ><p>오늘은<br />이런 책<span class="ico-new"></span></p>
+            </a>
+            <a class="item"><p>뮤직 인사이드</p> </a>
+            <a class="item"
+              ><p>글쓰기<br />코치</p>
+            </a>
+            <a class="item"
+              ><p>직장인<br />현실조언</p>
+            </a>
+            <a class="item"
+              ><p>스타트업<br />경험담<span class="ico-new"></span></p>
+            </a>
+            <a class="item"
+              ><p>육아<br />이야기</p>
+            </a>
+            <a class="item"><p>요리·레시피</p> </a>
+            <a class="item"><p>건강·운동</p> </a>
+            <a class="item"
+              ><p>멘탈 관리<br />심리 탐구</p>
+            </a>
+            <a class="item"
+              ><p>디자인<br />스토리</p>
+            </a>
+            <a class="item"><p>문화·예술</p> </a>
+            <a class="item"><p>건축·설계</p> </a>
+            <a class="item"><p>인문학·철학</p> </a>
+            <a class="item"
+              ><p>쉽게 읽는<br />역사</p>
+            </a>
+            <a class="item"
+              ><p>우리집<br />반려동물</p>
+            </a>
+            <a class="item"
+              ><p>멋진<br />캘리그래피</p>
+            </a>
+            <a class="item"><p>사랑·이별</p> </a>
+            <a class="item"
+              ><p>감성<br />에세이<span class="ico-new"></span></p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- end of section keyword -->
+
+      <section class="writers cate">
+        <dis class="center">
+          <h3>BRUNCH WRITERS</h3>
+          <p class="cateP">브런치 추천 작가</p>
+          <div class="recommend-author">
+            <ul class="re-A-tab">
+              <li><a href="#" class="on">경제</a></li>
+              <li><a href="#" class="hangeul">외국어</a></li>
+              <li><a href="#" class="latin">브랜딩</a></li>
+            </ul>
+          </div>
+          <div class="writer-card">
+            <ul>
+              <li>
+                <a class="w-card" href="#">
+                  <img src="/brunch_R/img/logo.png" alt="" class="profill" />
+                  <b>스토리위너코치</b>
+                  <em>마은성장연구소 기획자</em>
+                  <p>
+                    14년차 기자 출신 콘텐츠마케터. 누구에게나 있는 보물 같은
+                    스토리를 발굴하여 나만의 콘텐츠로 만드는 것을 돕고 싶습니다.
+                    모두가 행복
+                  </p>
+                </a>
+                <div class="writer-keyword">
+                  <a href="#" class="on">에세이</a>
+                  <a href="#" class="on">경제</a>
+                  <a href="#" class="on"></a>
+                </div>
+              </li>
+              <li>
+                <a class="w-card" href="#">
+                  <img src="/brunch_R/img/logo.png" alt="" class="profill" />
+                  <b>스토리위너코치</b>
+                  <em>마은성장연구소 기획자</em>
+                  <p>
+                    14년차 기자 출신 콘텐츠마케터. 누구에게나 있는 보물 같은
+                    스토리를 발굴하여 나만의 콘텐츠로 만드는 것을 돕고 싶습니다.
+                    모두가 행복
+                  </p>
+                </a>
+                <div class="writer-keyword">
+                  <a href="#" class="on">에세이</a>
+                  <a href="#" class="on">경제</a>
+                  <a href="#" class="on"></a>
+                </div>
+              </li>
+              <li>
+                <a class="w-card" href="#">
+                  <img src="/brunch_R/img/logo.png" alt="" class="profill" />
+                  <b>스토리위너코치</b>
+                  <em>마은성장연구소 기획자</em>
+                  <p>
+                    14년차 기자 출신 콘텐츠마케터. 누구에게나 있는 보물 같은
+                    스토리를 발굴하여 나만의 콘텐츠로 만드는 것을 돕고 싶습니다.
+                    모두가 행복
+                  </p>
+                </a>
+                <div class="writer-keyword">
+                  <a href="#" class="on">에세이</a>
+                  <a href="#" class="on">경제</a>
+                  <a href="#" class="on"></a>
+                </div>
+              </li>
+              <li>
+                <a class="w-card" href="#">
+                  <img src="/brunch_R/img/logo.png" alt="" class="profill" />
+                  <b>스토리위너코치</b>
+                  <em>마은성장연구소 기획자</em>
+                  <p>
+                    14년차 기자 출신 콘텐츠마케터. 누구에게나 있는 보물 같은
+                    스토리를 발굴하여 나만의 콘텐츠로 만드는 것을 돕고 싶습니다.
+                    모두가 행복
+                  </p>
+                </a>
+                <div class="writer-keyword">
+                  <a href="#" class="on">에세이</a>
+                  <a href="#" class="on">경제</a>
+                  <a href="#" class="on"></a>
+                </div>
+              </li>
+              <li>
+                <a class="w-card" href="#">
+                  <img src="/brunch_R/img/logo.png" alt="" class="profill" />
+                  <b>스토리위너코치</b>
+                  <em>마은성장연구소 기획자</em>
+                  <p>
+                    14년차 기자 출신 콘텐츠마케터. 누구에게나 있는 보물 같은
+                    스토리를 발굴하여 나만의 콘텐츠로 만드는 것을 돕고 싶습니다.
+                    모두가 행복
+                  </p>
+                </a>
+                <div class="writer-keyword">
+                  <a href="#" class="on">에세이</a>
+                  <a href="#" class="on">경제</a>
+                  <a href="#" class="on"></a>
+                </div>
+              </li>
+              <li>
+                <a class="w-card" href="#">
+                  <img src="/brunch_R/img/logo.png" alt="" class="profill" />
+                  <b>스토리위너코치</b>
+                  <em>마은성장연구소 기획자</em>
+                  <p>
+                    14년차 기자 출신 콘텐츠마케터. 누구에게나 있는 보물 같은
+                    스토리를 발굴하여 나만의 콘텐츠로 만드는 것을 돕고 싶습니다.
+                    모두가 행복
+                  </p>
+                </a>
+                <div class="writer-keyword">
+                  <a href="#" class="on">에세이</a>
+                  <a href="#" class="on">경제</a>
+                  <a href="#" class="on"></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </dis>
+      </section>
+      <section class="articles cate">
+        <div class="banner"></div>
+        <h3>BRUNCH ARTICLES</h3>
+        <p class="cateP">브런치의 다양한 글을 만나보세요.</p>
         <div class="wrap_slide">
-          <ul class="list_slide">
-            <li class="slide-one">
-              <a class="bookcover"></a>
-              <div class="article-card">
-                <a href=""></a>
-                <a href=""></a>
-              </div>
+          <ul class="list_slide" id="conSlide">
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
             </li>
-            <li class="slide-one">
-              <a class="bookcover"></a>
-              <div class="article-card">
-                <a href=""></a>
-                <a href=""></a>
-              </div>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
             </li>
-            <li class="slide-one">
-              <a class="bookcover"></a>
-              <div class="article-card">
-                <a href=""></a>
-                <a href=""></a>
-              </div>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
+            </li>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
+            </li>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
+            </li>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
+            </li>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
+            </li>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
+            </li>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
+            </li>
+            <li class="slide-down">
+              <a class="down-con">
+                <img src="/brunch_R/img/mainCover/img1.png" alt="" />
+                <b>현재 하노이 상황</b>
+                <p>
+                  그야말로 비상사태다. 아침에 눈을 떠도 마음이 싱숭생숭하고 책도
+                  손에 잡히지 않는다. 코로나가 퍼진 이후 베트남은 지금 최대의
+                  위기 상황이디ㅏ. 베트남 정부는 일찌감치 해외입국을 차단하고
+                  확진자와 밀접 접촉자를 나름 잘 관리한 결과 몇 달 동안은 사회적
+                  확진자가 나오지 않을 만큼 상황이 좋았었다. 나를 포함 한
+                  교민들은 '하노이는 비교적 코로나 대처를 잘했고
+                </p>
+              </a>
             </li>
           </ul>
         </div>
         <div class="slide-btn">
-          <a href="" class="pre-btn"></a>
-          <a href="" class="nex-btn"></a>
+          <button class="pre-btn conPre" onclick="prebNextcon(-1)"></button>
+          <button class="nex-btn conNex" onclick="prebNextcon(1)"></button>
         </div>
-        <div class="slide-paging center">
-          <ul class="slidepagelist">
-            <li class="page-num"><a href="">01</a></li>
-            <li class="page-num"><a href="">02</a></li>
-            <li class="page-num"><a href="">03</a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="keyword cate">
-        <div class="center">
-          <h3>BRUNCH KEYWORD</h3>
-          <p>키워드로 분류된 다양한 글 모음</p>
-          <div class="container">
-            <a class="item">지구한바퀴 세계여행</a>
-            <a class="item">그림 웹툰</a>
-            <a class="item">시사 이슈</a>
-            <a class="item">IT 트렌드</a>
-            <a class="item">사진 촬영</a>
-            <a class="item">취향저격 영화리뷰</a>
-            <a class="item">오늘은 이런 책</a>
-            <a class="item">뮤직 인사이드</a>
-            <a class="item">글쓰기 코치</a>
-            <a class="item">직장인 현실조언</a>
-            <a class="item">스타트업 경험담</a>
-            <a class="item">육아 이야기</a>
-            <a class="item">요리 레시피</a>
-            <a class="item">건강 운동</a>
-            <a class="item">멘탈 관리 심리 탐구</a>
-            <a class="item">디자인 스토리</a>
-            <a class="item">문화 예술</a>
-            <a class="item">건축 설계</a>
-            <a class="item">인문학 철학</a>
-            <a class="item">쉽게 읽는 역사</a>
-            <a class="item">우리집 반려동물</a>
-            <a class="item">멋진 캘리그래피</a>
-            <a class="item">사랑 이별</a>
-            <a class="item">감성 에세이</a>
-          </div>
-        </div>
-      </section>
-      <section class="writers cate">
-        <h3>BRUNCH WRITERS</h3>
-        <p>브런치 추천 작가</p>
-      </section>
-      <div class="banner"></div>
-      <section class="articles cate">
-        <h3>BRUNCH ARTICLES</h3>
-        <p>브런치의 다양한 글을 만나보세요.</p>
       </section>
       <footer></footer>
     </div>
+    <script src="/brunch_R/js/main.js"></script>
   </body>
 </html>
